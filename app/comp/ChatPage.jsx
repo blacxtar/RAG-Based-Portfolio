@@ -1,13 +1,10 @@
-
-
+"use client";
 import React, { useEffect, useRef, useState } from "react";
 import ChatBar from "./ChatBar";
-
 
 function ChatPage() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
-
   const streamingMessageRef = useRef("");
   const [typingState, setTypingState] = useState({
     isTyping: false,
@@ -23,18 +20,26 @@ function ChatPage() {
       isUser: false,
       timestamp: new Date(),
     },
-    {
-      id: "2",
-      text: "👋 **Hello!** ",
-      isUser: true,
-      timestamp: new Date(),
-    },
   ];
 
   const typingMessages = {
     fetching: "Searching knowledge base...",
     generating: "Processing and analyzing...",
     finalizing: "Crafting response...",
+  };
+
+  const suggestions = [
+    { id: 1, text: "Who is Salman Ahmad?" },
+    { id: 2, text: "What projects is he working on?" },
+    { id: 3, text: "Write a short bio of Salman Ahmad." },
+  ];
+
+  // Function to handle click on a suggestion
+  const handleSuggestionClick = (id) => {
+    const selectedSuggestion = suggestions.find((s) => s.id === id);
+    if (selectedSuggestion) {
+      setInput(selectedSuggestion.text); // This will now work properly!
+    }
   };
 
   useEffect(() => {
@@ -66,7 +71,7 @@ function ChatPage() {
 
     setMessages((prev) => [...prev, userMessage]);
     const currentInput = input;
-    setInput("");
+    setInput(""); // Clear input
 
     setTimeout(() => {
       generateAIResponse(currentInput);
@@ -98,7 +103,7 @@ function ChatPage() {
         message: typingMessages.generating,
       }));
 
-      const response = await fetch("http://localhost:4000/chat", {
+      const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: input }),
@@ -180,6 +185,21 @@ function ChatPage() {
       {/* Chat messages container */}
       <div className="flex-1 overflow-y-auto p-4 pb-32">
         <div className="max-w-4xl mx-auto space-y-6">
+          {/* Suggestions appear only when there's just the greeting */}
+          {messages.length <= 1 && (
+            <div className="mb-4 flex flex-wrap gap-2 justify-center">
+              {suggestions.map((q) => (
+                <button
+                  key={q.id}
+                  onClick={() => handleSuggestionClick(q.id)}
+                  className="px-4 py-2 text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full shadow-sm transition"
+                >
+                  {q.text}
+                </button>
+              ))}
+            </div>
+          )}
+
           {messages.map((message) => (
             <div
               key={message.id}
@@ -195,10 +215,10 @@ function ChatPage() {
                 {/* Message bubble */}
                 <div className="flex flex-col space-y-1 flex-1">
                   <div
-                    className={`relative px-5 py-4  ${
+                    className={`relative px-5 py-4 ${
                       message.isUser
                         ? " text-gray-900 bg-gray-200 rounded-2xl"
-                        : " text-gray-800 "
+                        : " text-gray-800"
                     }`}
                   >
                     <p className="text-sm leading-relaxed whitespace-pre-wrap">
@@ -210,23 +230,25 @@ function ChatPage() {
             </div>
           ))}
 
-          <div ref={messagesEndRef} />
-         
-            <div className={`${typingState.isTyping ? "flex":"hidden"} justify-start group`}>
-              <div className="flex items-start space-x-3 max-w-[85%]">
-                <div className="flex flex-col space-y-1 flex-1">
-                  <div className="relative px-5 py-4  flex items-center gap-3">
-                    {/* Loader */}
-                    <div className="w-4 h-4 border-2 border-t-gray-600 border-gray-700 rounded-full animate-spin"></div>
-                    {/* Status text */}
-                    <p className="text-sm text-gray-700">
-                      {typingState.message}
-                    </p>
-                  </div>
+          {/* Typing indicator */}
+          <div
+            className={`${typingState.isTyping ? "flex" : "hidden"} justify-start group`}
+          >
+            <div className="flex items-start space-x-3 max-w-[85%]">
+              <div className="flex flex-col space-y-1 flex-1">
+                <div className="relative px-5 py-4 flex items-center gap-3">
+                  {/* Loader */}
+                  <div className="w-4 h-4 border-2 border-t-gray-600 border-gray-700 rounded-full animate-spin"></div>
+                  {/* Status text */}
+                  <p className="text-sm text-gray-700">
+                    {typingState.message}
+                  </p>
                 </div>
               </div>
             </div>
-      
+          </div>
+
+          <div ref={messagesEndRef} />
         </div>
       </div>
 

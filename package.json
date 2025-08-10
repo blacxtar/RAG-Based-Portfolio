@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@chatscope/chat-ui-kit-react": "^2.1.1",
+    "@langchain/textsplitters": "^0.1.0",
+    "@pinecone-database/pinecone": "^6.1.2",
     "@radix-ui/react-label": "^2.1.7",
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-switch": "^1.2.5",
@@ -22,6 +24,7 @@
     "lucide-react": "^0.524.0",
     "motion": "^12.23.12",
     "next": "13.4.19",
+    "openai": "^5.12.2",
     "postcss": "8.4.28",
     "react": "18.2.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
