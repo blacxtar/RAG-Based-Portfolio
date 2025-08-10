@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Projects from "./Projects";
 import jamia from "../../public/jamia.png";
 
-import { education, projects } from "@/utils/contanst";
+import { education, projects } from "@/utils/contants";
 import EducationCard from "./EducationCard";
 
 function Aboutme() {
