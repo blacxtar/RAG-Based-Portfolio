@@ -6,8 +6,7 @@ const {
   
 } = require("@tabler/icons-react");
 import { Mail } from "lucide-react";
-import jamia from "../public/jamia.png";
-import kmc from "../public/kmc.png";
+
 export const links = [
   {
     title: "GitHub",
@@ -78,16 +77,17 @@ export const education = [
   {
     degree: "Master's of Computer Application",
     name: "Jamia Millia Islamia, New Delhi",
-    image: jamia,
+    image: "/jamia.png",
     link: "",
   },
   {
     degree: "Bachelor's of Computer Application",
     name: "KMC Language University, Lucknow",
-    image: kmc,
+    image: "/kmc.png",
     link: "",
   },
 ];
+
 
 // projects.js
 

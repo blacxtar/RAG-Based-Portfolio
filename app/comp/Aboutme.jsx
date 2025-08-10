@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Projects from "./Projects";
-import jamia from "../../public/jamia.png";
+
 
 import { education, projects } from "@/utils/contants";
 import EducationCard from "./EducationCard";
@@ -33,7 +33,7 @@ function Aboutme() {
             <Projects
               title={project.title}
               description={project.description}
-              logo={jamia}
+              logo="/jamia.png"
               duration={project.duration}
               info={project.info}
             />
