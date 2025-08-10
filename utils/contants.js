@@ -1,9 +1,9 @@
 const {
   IconBrandLinkedin,
-  IconBrandInstagram,
+  
   IconBrandX,
   IconBrandGithub,
-  IconBrandGmail,
+  
 } = require("@tabler/icons-react");
 import { Mail } from "lucide-react";
 import jamia from "../public/jamia.png";
