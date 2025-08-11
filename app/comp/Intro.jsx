@@ -11,19 +11,19 @@ export default function Intro() {
     <div className=" flex flex-col gap-3">
       <div className=" relative md:w-80 bg-white flex flex-col  p-block-padding mx-4 md:mx-2 border border-gray-300">
         <div className="flex justify-center">
-        <Button
-          borderRadius="50%" // ensures circle border
-          duration={4000} // slower movement for elegance
-          containerClassName="h-40 w-40 p-[5px]" // matches image size + thin border
-          borderClassName="bg-[radial-gradient(circle_at_center,_#0ea5e9_30%,transparent_70%)] opacity-50"
-          className="bg-transparent border-none shadow-none "
-        >
-          <Image
-            src={photodp}
-            alt="Profile pic"
-            className="w-full h-full object-cover rounded-full"
-          />
-        </Button>
+          <Button
+            borderRadius="50%" // ensures circle border
+            duration={4000} // slower movement for elegance
+            containerClassName="h-40 w-40 p-[5px]" // matches image size + thin border
+            borderClassName="bg-[radial-gradient(circle_at_center,_#0ea5e9_30%,transparent_70%)] opacity-50"
+            className="bg-transparent border-none shadow-none "
+          >
+            <Image
+              src={photodp}
+              alt="Profile pic"
+              className="w-full h-full object-cover rounded-full"
+            />
+          </Button>
         </div>
 
         <div className=" flex justify-center font-gloria">
@@ -34,21 +34,44 @@ export default function Intro() {
           scalable applications
         </p>
       </div>
+
+      {/* Contact me */}
       <div className=" bg-white p-block-padding border border-gray-300 py-2  mx-4 md:mx-2">
         <FloatingDock items={links} />
       </div>
-      <div className=" bg-white justify-center md:max-w-[320px] p-block-padding border flex  border-gray-300  mx-4 md:mx-2">
-        <p className=" flex flex-wrap gap-2 ">
-          {tech.map((t) => (
-            <span
-              key={t}
-              className=" bg-gray-200 text-gray-900 px-2 p-1 rounded-md font-quicksand "
-            >
-              {t}
-            </span>
-          ))}
-        </p>
-      </div>
+
+      
+    {/* Skills */}
+<div className="bg-white justify-center md:max-w-[320px] p-block-padding border flex border-gray-300 mx-4 md:mx-2">
+  <div className="flex flex-wrap gap-2 justify-center">
+    {tech.map((t, i) => (
+      <span
+        key={t}
+        className={`bg-gray-200 text-gray-900 px-3 py-1 rounded-md font-quicksand text-base transition-all duration-200 hover:scale-110 hover:shadow-md animate-float`}
+        style={{
+          animationDelay: `${i * 0.15}s`, // each chip floats slightly later
+        }}
+      >
+        {t}
+      </span>
+    ))}
+  </div>
+</div>
+
+<style jsx>{`
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+`}</style>
+
     </div>
   );
 }

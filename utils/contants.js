@@ -66,8 +66,10 @@ export const tech = [
   "Nextjs",
   "TailwindCss",
   "Nodejs",
+  "Express",
   "MongoDB",
-  "Express.js",
+  "Docker",
+  "Redis",
   "Mongoose",
   "OpenAI",
   "LangChain",
@@ -78,13 +80,13 @@ export const education = [
     degree: "Master's of Computer Application",
     name: "Jamia Millia Islamia, New Delhi",
     image: "/jamia.png",
-    link: "",
+    link: "https://jmi.ac.in/",
   },
   {
     degree: "Bachelor's of Computer Application",
     name: "KMC Language University, Lucknow",
     image: "/KmcIcon.png",
-    link: "",
+    link: "https://kmclu.ac.in/",
   },
 ];
 
@@ -96,19 +98,22 @@ export const projects = [
   {
     title: "AI Course Generator ",
     logo: "/AIcourseIcon.png",
+   
     description: "Custom Course crafted for your needs.",
     duration: "2024",
     info: `
       <ul class='custom-disc'>
        <li> Mobile app that generates personalized AI learning courses using Google Gemini AI </li>
-       <li> Uses Firebase for user authentication, data storage, and real-time updates.</li>
+       <li> Uses Firebasefor user authentication, data storage, and real-time updates.</li>
        <li> Offers course recommendations and progress tracking in a sleek React Native interface.</li>
+       <li> Link : <a href="https://github.com/blacxtar/CourseGenerator" target='_blank'> https://github.com/blacxtar/CourseGenerator <a/> </li>
       </ul>
     `,
   },
   {
     title: "Full Stack Chat App",
     logo: "/chatappIcon.webp",
+    
     description: "Real-time chat app with MERN stack & WebSockets",
     duration: "2024",
     info: `
@@ -116,6 +121,7 @@ export const projects = [
         <li>Developed a responsive real-time chat app using MERN stack, Socket.IO, and TailwindCSS.</li>
         <li>Implemented private messaging, typing indicators, and online/offline status tracking.</li>
         <li>Deployed backend on Render and optimized WebSocket events for performance.</li>
+        <li> Link : <a href="https://mern-chat-app-ix3z.onrender.com/" target='_blank'> https://mern-chat-app-ix3z.onrender.com/<a/> </li>
       </ul>
     `,
   },
@@ -123,6 +129,7 @@ export const projects = [
   {
     title: "Personal Portfolio with RAG-based chatbot",
     logo: "/portfolioIcon.png",
+    link:"https://salmannahmad.com",
 
     description: "Retrieval-Augmented Generation AI Assistant",
     duration: "2025",
@@ -130,12 +137,10 @@ export const projects = [
       <ul class='custom-disc'>
           <li>Modern and minimal portfolio showcasing your skills, projects.</li>
           <li> Uses Next.js frontend for a smooth UI/UX.</li>
-          <li>Optimized for performance, SEO, and interactivity, making the portfolio both informative and engaging.</li>
           <li>Includes an embedded RAG-Based Chatbot feature.
-          <ul class='custom-disc>
-              <li>Connects to OpenAI API for AI-powered conversational responses.</li>
-              <li>Utilizes document embeddings and Pinecone vector database to provide relevant, contextual data.</li>
-          </ul>
+          <li>Connects to OpenAI API for AI-powered conversational responses.</li>
+          <li>Utilizes document embeddings and Pinecone vector database to provide relevant, contextual data.</li>
+          <li> Link : <a href="https://salmannahmad.com" target='_blank'> https://salmannahmad.com <a/> </li>
 
       </ul>
     `,
@@ -144,7 +149,7 @@ export const projects = [
   {
     title: "Crypto Crash Game",
     logo: "/stockgame.png",
-
+    link:"https://crypto-crash.netlify.app",
     description: "Interactive multiplayer crypto crash game",
     duration: "2025",
     info: `
@@ -152,6 +157,8 @@ export const projects = [
         <li>Built a modern, gamified UI in React integrated with WebSocket-powered backend API.</li>
         <li>Implemented real-time game state updates, player leaderboard, and responsive design.</li>
         <li>Focused on smooth animations, low latency updates, and scalable event handling.</li>
+        <li> Link : <a href="https://crypto-crash.netlify.app" target='_blank'> https://crypto-crash.netlify.app <a/> </li>
+
       </ul>
     `,
   },

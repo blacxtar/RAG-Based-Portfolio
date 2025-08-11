@@ -4,8 +4,10 @@ import { useState } from "react";
 import { ChevronUp } from "lucide-react";
 import Image from "next/image";
 
+
 export default function Projects({  title,
   logo,
+  link,
   description,
   duration,
   info }) {
@@ -17,8 +19,10 @@ export default function Projects({  title,
 
   return (
     <div className="max-w-4xl  bg-white group">
+      
       <div className=" border-gray-200 overflow-hidden ">
         {/* Header */}
+       
         <button
           onClick={toggleAccordion}
           className="w-full flex items-center justify-between py-4 md:px-6 md:p-4 bg-white transition-colors duration-200  "
@@ -26,7 +30,9 @@ export default function Projects({  title,
           <div className="flex items-center space-x-4">
             {/* Project Logo*/}
             <div className="w-12 h-12 shadow-sm border  flex items-center justify-center" >
+              
              <Image src={logo} alt="" width={48} height={48}/>
+             
             </div>
             
             {/* Few words description */}
@@ -48,7 +54,7 @@ export default function Projects({  title,
             {duration}
           </div>
         </button>
-
+        
         {/* Expandable Content */}
         <div 
           className={`overflow-hidden transition-all duration-500 ease-in-out ${

@@ -16,7 +16,7 @@ function ChatPage() {
   const initialMessages = [
     {
       id: "1",
-      text: "👋 **Hello!** I'm your AI assistant specialized in helping with questions about **Salman Ahmad**.\n\nI can help you with:\n- 📚 Research and information\n- 💡 Analysis and insights\n- 🎯 Specific questions\n- 📝 Detailed explanations\n\nWhat would you like to know?",
+      text: "👋 Hello! I'm your AI assistant specialized in helping with questions about **Salman Ahmad**.\n\nI can help you with:\n- 📚 Research and information\n- 💡 Analysis and insights\n- 🎯 Specific questions\n- 📝 Detailed explanations\n\nWhat would you like to know?",
       isUser: false,
       timestamp: new Date(),
     },
@@ -29,9 +29,9 @@ function ChatPage() {
   };
 
   const suggestions = [
-    { id: 1, text: "Who is Salman Ahmad?" },
+    { id: 1, text: "Write a short bio of Salman Ahmad." },
     { id: 2, text: "What projects is he working on?" },
-    { id: 3, text: "Write a short bio of Salman Ahmad." },
+    { id: 3, text: "Should we hire him? If yes,then why?" },
   ];
 
   // Function to handle click on a suggestion
@@ -232,7 +232,9 @@ function ChatPage() {
 
           {/* Typing indicator */}
           <div
-            className={`${typingState.isTyping ? "flex" : "hidden"} justify-start group`}
+            className={`${
+              typingState.isTyping ? "flex" : "hidden"
+            } justify-start group`}
           >
             <div className="flex items-start space-x-3 max-w-[85%]">
               <div className="flex flex-col space-y-1 flex-1">
@@ -240,9 +242,7 @@ function ChatPage() {
                   {/* Loader */}
                   <div className="w-4 h-4 border-2 border-t-gray-600 border-gray-700 rounded-full animate-spin"></div>
                   {/* Status text */}
-                  <p className="text-sm text-gray-700">
-                    {typingState.message}
-                  </p>
+                  <p className="text-sm text-gray-700">{typingState.message}</p>
                 </div>
               </div>
             </div>

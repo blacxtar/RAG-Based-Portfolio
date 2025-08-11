@@ -18,7 +18,7 @@ function Aboutme() {
               degree={ed.degree}
               schoolName={ed.name}
               image={ed.image}
-              link={"https://www.pocketworks.co.uk"}
+              link={ed.link}
             />
             <hr className=" mx-4" />
           </div>
@@ -33,6 +33,7 @@ function Aboutme() {
             <Projects
               title={project.title}
               description={project.description}
+              link={project.link}
               logo={project.logo}
               duration={project.duration}
               info={project.info}
