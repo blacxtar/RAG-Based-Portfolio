@@ -83,7 +83,7 @@ export const education = [
   {
     degree: "Bachelor's of Computer Application",
     name: "KMC Language University, Lucknow",
-    image: "/Kmc.png",
+    image: "/KmcIcon.png",
     link: "",
   },
 ];
@@ -91,61 +91,6 @@ export const education = [
 
 // projects.js
 
-// export const projects = [
-//   {
-//     title: "Full Stack Chat App",
-
-//     description: "Real-time chat app with MERN stack & WebSockets",
-//     duration: "2024",
-//     info: `
-//       <ul class='custom-disc'>
-//         <li>Developed a responsive real-time chat app using MERN stack, Socket.IO, and TailwindCSS.</li>
-//         <li>Implemented private messaging, typing indicators, and online/offline status tracking.</li>
-//         <li>Deployed backend on Render and optimized WebSocket events for performance.</li>
-//       </ul>
-//     `,
-//   },
-
-//   {
-//     title: "AI Chatbot with RAG",
-
-//     description: "Retrieval-Augmented Generation AI Assistant",
-//     duration: "2025",
-//     info: `
-//       <ul class='custom-disc'>
-//         <li>Built an AI chatbot using OpenAI, LangChain, and LangGraph for contextual responses.</li>
-//         <li>Integrated Pinecone for vector search and document retrieval.</li>
-//         <li>Designed chat UI in React with Markdown rendering and code highlighting.</li>
-//       </ul>
-//     `,
-//   },
-//   {
-//     title: "Crypto Crash Game",
-
-//     description: "Interactive multiplayer crypto crash game",
-//     duration: "2025",
-//     info: `
-//       <ul class='custom-disc'>
-//         <li>Built a modern, gamified UI in React integrated with WebSocket-powered backend API.</li>
-//         <li>Implemented real-time game state updates, player leaderboard, and responsive design.</li>
-//         <li>Focused on smooth animations, low latency updates, and scalable event handling.</li>
-//       </ul>
-//     `,
-//   },
-//   {
-//     title: "Portfolio Website",
-
-//     description: "Personal portfolio showcasing projects & skills",
-//     duration: "Ongoing",
-//     info: `
-//       <ul class='custom-disc'>
-//         <li>Developed a responsive portfolio using Next.js, TailwindCSS, and Framer Motion.</li>
-//         <li>Integrated animations, smooth scrolling, and reusable components.</li>
-//         <li>Showcases professional projects, skills, and experience.</li>
-//       </ul>
-//     `,
-//   },
-// ];
 
 export const projects = [
   {
