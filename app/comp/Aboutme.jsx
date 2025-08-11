@@ -33,7 +33,7 @@ function Aboutme() {
             <Projects
               title={project.title}
               description={project.description}
-              logo="/jamia.png"
+              logo={project.logo}
               duration={project.duration}
               info={project.info}
             />

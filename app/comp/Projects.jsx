@@ -25,8 +25,8 @@ export default function Projects({  title,
         >
           <div className="flex items-center space-x-4">
             {/* Project Logo*/}
-            <div className="w-12 h-12 shadow-sm border  flex items-center justify-center">
-             <Image src={logo} alt=""/>
+            <div className="w-12 h-12 shadow-sm border  flex items-center justify-center" >
+             <Image src={logo} alt="" width={48} height={48}/>
             </div>
             
             {/* Few words description */}

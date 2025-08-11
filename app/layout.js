@@ -7,7 +7,7 @@ export const metadata = {
   title: "Salman Ahmad",
   description: "Full stack Developer",
   icons: {
-    icon: ["/favicon.ico?v=4"],
+    icon: ["/salmanFavicon.jpeg"],
     apple: ["/apple-touch-icon.png?v=4"],
     shortcut: ["/apple-youch-icon.png"],
   },

@@ -2,7 +2,7 @@ import { FloatingDock } from "@/components/ui/floating-dock";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import Image from "next/image";
 import React from "react";
-import photodp from "../../public/dp.jpeg";
+import photodp from "../../public/salmanFavicon.jpeg";
 import { tech, links, words } from "@/utils/contants";
 import { Button } from "@/components/ui/moving-border";
 
