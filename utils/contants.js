@@ -83,7 +83,7 @@ export const education = [
   {
     degree: "Bachelor's of Computer Application",
     name: "KMC Language University, Lucknow",
-    image: "/kmc.png",
+    image: "/Kmc.png",
     link: "",
   },
 ];
